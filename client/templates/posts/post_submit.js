@@ -21,7 +21,8 @@ Template.postSubmit.events({
  var errors = validatePost(post);
  if (errors.title || errors.url)
  return Session.set('postSubmitErrors', errors);
- Meteor.call('postInsert', post, function(error, result) {
+ 
+ /*Meteor.call('postInsert', post, function(error, result) {
  // display the error to the user and abort
  if (error)
  return throwError(error.reason);
@@ -31,4 +32,12 @@ Template.postSubmit.events({
  Router.go('postPage', {_id: result._id}); 
  });
  }
-});
+});*/
+	 
+Meteor.call('post', post, function(error, id) {
+if (error) {
+// display the error to the user
+Errors.throw(error.reason);	 
+	 
+	 
+	 
