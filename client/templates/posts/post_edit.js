@@ -26,11 +26,10 @@ Template.postEdit.events({
     if (errors.title || errors.url)
       return Session.set('postEditErrors', errors);
     
-   
-	  Posts.update(currentPostId, {$set: postProperties}, function(error) {
-	   if (error) {
-	   // display the error to the user
-	   Errors.throw(error.reason);
+    Posts.update(currentPostId, {$set: postProperties}, function(error) {
+      if (error) {
+        // display the error to the user
+        Errors.throw(error.reason);
       } else {
         Router.go('postPage', {_id: currentPostId});
       }
