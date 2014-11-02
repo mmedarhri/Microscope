@@ -12,7 +12,7 @@ Package.onUse(function (api, where) {
 });
 
 Package.onTest(function(api) {
- api.use('tmeasday:errors', 'client');
+ api.use('mmedarhri:errors', 'client');
  api.use(['tinytest', 'test-helpers'], 'client'); 
  api.addFiles('errors_tests.js', 'client');
 });
