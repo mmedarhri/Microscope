@@ -1,4 +1,0 @@
-Microscope
-==========
-
-Meteror Project
