@@ -12,6 +12,9 @@ likeCount : function()
 
 { return currentLikeCount;
 }
-
 });
 
+Template.postItem.events({ 'click .upvote': function(e) {
+  e.preventDefault();
+  Meteor.call('upvote', this._id); }
+});
