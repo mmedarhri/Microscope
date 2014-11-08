@@ -13,3 +13,5 @@ Meteor.publish('notifications', function() {
 Meteor.publish('singlePost', function(id) { check(id, String)
   return Posts.find(id);
 });
+
+
